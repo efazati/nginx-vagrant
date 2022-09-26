@@ -17,6 +17,7 @@ cp -r /home/vagrant/files /home/user/files
 chown -R user:user /home/user
 cp /home/vagrant/files/nginx.conf /etc/nginx/nginx.conf
 
+setfacl -m u:nginx:--x /home/user/
 setfacl -m u:nginx:r-x /home/user/files 
 setfacl -m u:nginx:r-- /home/user/files/*
 
