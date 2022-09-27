@@ -56,7 +56,7 @@ openssl x509 -req -days 365 -in "${HOST}.csr" -signkey "${HOST}.key" -out "${HOS
 
 # openssl dhparam -out /etc/ssl/certs/dhparam.pem 2048
 
-docker run --rm -d -it -p 8000:80 yeasy/simple-web:latest 
+docker run --rm -d -it -p 8000:80 mendhak/http-https-echo
 
 systemctl enable nginx
 
